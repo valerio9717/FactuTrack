@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FactuTrack - Sistema de Facturación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Bienvenido, [Nombre del Usuario]</h1>
+        <button onclick="logout()" class="btn-logout">Cerrar Sesión</button>
+    </header>
+    <main class="dashboard-main">
+        <section class="info-section">
+            <h2>Resumen del Día</h2>
+            <p>Total de Ventas: <strong>$12,500</strong></p>
+            <p>Facturas Generadas: <strong>25</strong></p>
+        </section>
+        <section class="navigation-section">
+            <h2>Acciones Rápidas</h2>
+            <div class="quick-links">
+                <button onclick="navigateTo('nueva-factura.html')">Crear Nueva Factura</button>
+                <button onclick="navigateTo('facturas.html')">Ver Facturas</button>
+                <button onclick="navigateTo('clientes.html')">Administrar Clientes</button>
+                <button onclick="navigateTo('reportes.html')">Ver Reportes</button>
+            </div>
+        </section>
+        <section class="recent-section">
+            <h2>Últimas Facturas</h2>
+            <ul>
+                <li>Factura #00123 - $350.00 - Juan Pérez</li>
+                <li>Factura #00122 - $500.00 - María López</li>
+                <li>Factura #00121 - $1,200.00 - Empresa XYZ</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        function logout() {
+            alert("Has cerrado sesión.");
+            window.location.href = "login.html";
+        }
+
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
